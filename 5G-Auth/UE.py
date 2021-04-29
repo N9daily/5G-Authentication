@@ -33,55 +33,80 @@ CK || IK 推導出 K_ausf
 K_ausf 推導出 K_seaf
 傳遞：RES*
 """
-#USIM self
-Key = "0000000000000000" #Key = 128 bits
-f1 = "111111111111111111111111"
-f2 = "22222222"
-f3 = "3333333333333333"
-f4 = "4444444444444444"
-SQN = "010101" #SQN = 48 bits
-AMF = "10" #AMF = 16 bits
-#UE Get!
-data121 = t.recv(1024) #RAND Get!
+#USIM
+Key = "1000000000000001"
+SQN = "010101"
+SQN = str(int(SQN) + 1).zfill(6) #Each time authentication connect, add 1
+#Get data from SEAF
+data121 = t.recv(1024) #RAND
 RAND = data121.decode('UTF-8')
-data122 = t.recv(1024) #AUTN Get!
+data122 = t.recv(1024) #AUTN
 AUTN = data122.decode('UTF-8')
-data123 = t.recv(1024) #ngKSI Get!
+data123 = t.recv(1024) #ngKSI
 ngKSI = data123.decode('UTF-8')
-MAC = int(f1)^int("%s%s%s" %(SQN, RAND, AMF)) #MAC = f1(SQN || RAND || AMF)
-#Algorithm in UE
-CK = int(f3)^int(RAND) #CK = 128 bits
-IK = int(f4)^int(RAND) #IK = 128 bits
-K_ausf = "%s%s" %(CK, IK) #K_ausf = CK || IK
-RES = int(f2)^int(RAND) #RES = 64 bits
-XMAC = int(f1)^int("%s%s%s" %(SQN, RAND, AMF)) #XMAC = f1(SQN || RAND || AMF)
-# KDF function
-from hashlib import sha256
-import base64
-import hmac
-def KDF(data, key):
-    key = key.encode('UTF-8')
-    message = data.encode('UTF-8')
-    sign = base64.b64encode(hmac.new(key, message, digestmod=sha256).digest())
-    sign = str(sign, 'UTF-8')
-    return sign
-K_seaf = KDF(K_ausf, "20011") #KDF(K_ausf, sn-name), sn-name = UDM's? AUSF's? UE's?
+print("\n\n")
 print("STEP 12")
-print(" [XMAC]%s" %(XMAC))
-print(" [MAC]%s" %(MAC))
-if XMAC == MAC:
-    print(" XMAC = MAC, allow!")
+print("------------------------------------------------------------")
+print("| v     v     v     v")
+print("|>UE---RAN---AMF---SEAF---AUSF---UDM---ARPF")
+print("|>[RAND]%s" %(RAND))
+print("|>[AUTN]%s" %(AUTN))
+print("|>[ngKSI]%s" %(ngKSI))
+print("------------------------------------------------------------")
+print("|>[USIM]: Key, SQN")
+print("|>[Key]%s" %(Key))
+print("|>[SQN]%s" %(SQN))
+xor = AUTN[0:8]
+AMF = AUTN[8:10]
+MAC_A = AUTN[10:]
+print("------------------------------------------------------------")
+print("|>[AUTN]: xor, AMF, MAC-A")
+print("|>[xor]%s" %(xor))
+print("|>[AMF]%s" %(AMF))
+print("|>[MAC-A]%s" %(MAC_A))
+#Calculation in UE
+import ex
+XMAC_A = ex.f1(Key, RAND, AMF, SQN)
+RES = ex.f2(Key, RAND)
+CK = ex.f3(Key, RAND)
+IK = ex.f4(Key, RAND)
+AK = ex.f5(Key, RAND)
+print("------------------------------------------------------------")
+print("|      _____________________RAND____________________       |")
+print("|      |                      |      |      |      |       |")
+print("|      |  Key         AMF___  |  Key |      |  Key |       |")
+print("|      |   |                | |   |  |      |   |  |       |")
+print("|      f5__|    ______SQN___|_f1__⊥__f2     f3__⊥__f4      |")
+print("|      |       |              |      |      |      |       |")
+print("|      v       |              v      v      v      v       |")
+print("|      AK_____xor          XMAC-A   RES     CK     IK      |")
+print("|              |                                           |")
+print("|              v                                           |")
+print("|           SQN⊕AK                                         |")
+print("------------------------------------------------------------")
+print("|>[f1][XMAC-A]%s" %(XMAC_A))
+print("|>[f2][RES]%s" %(RES))
+print("|>[f3][CK]%s" %(CK))
+print("|>[f4][IK]%s" %(IK))
+print("|>[f5][AK]%s" %(AK))
+print("------------------------------------------------------------")
+if XMAC_A == MAC_A: #data in USIM = data from UDM
+    print("  XMAC = MAC, allow!")
 else:
-    print(" XMAC != MAC , NOT ALLOW!")
-    t.close()
-print(" *[RES]%s" %(RES))
+    print("  XMAC != MAC , NOT ALLOW!")
+    exit()
 
 """
 Step 13
 ⑬ Auth. Response
 Deliver RES to SEAF near by AMF
 """
-RES = "%s" %(RES)
 t.send(RES.encode('UTF-8'))
+print("\n\n")
 print("STEP 13")
-print(" Deliver [RES]%s to AMF" %(RES))
+print("------------------------------------------------------------")
+print("| v     v     v     v")
+print("|>UE---RAN---AMF---SEAF---AUSF---UDM---ARPF")
+print("|>[RES]%s" %(RES))
+print("------------------------------------------------------------")
+print("  Deliver [RES]%s to AMF" %(RES))

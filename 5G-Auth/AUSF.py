@@ -29,7 +29,8 @@ Deiver SUCI or SUPI, SN-name to UDM
 #link to UDM's host
 t = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 t.connect(("10.1.0.4", 1))
-t.send("%s%s".encode('UTF-8') %(SUPI, sn))
+data5 = "%s%s" %(SUPI, sn)
+t.send(data5.encode('UTF-8'))
 print("\n\n")
 print("STEP 05")
 print("------------------------------------------------------------")
@@ -49,59 +50,70 @@ K_ausf推導出K_seaf
 用HXRES與K_seaf替換掉原先內容，生成新AV：RAND、HXRES、K_seaf、AUTN
 """
 data81 = t.recv(1024) #AV
-data81 = data81.decode('UTF-8')
-data82 = t.recv(1024) #SUPI ,and store it
-data82 = data82.decode('UTF-8')
-data83 = t.recv(1024) #AKMA
-data83 = data83.decode('UTF-8')
-RAND = data81[0:16]
-XRES = data81[16:56] #Stroe
-K_ausf = data81[56:88]
-AUTN = data81[88:]
-import hashlib
-h = hashlib.sha1()
-h.update(XRES.encode('UTF-8'))
-HXRES = h.hexdigest()
-# KDF function
-from hashlib import sha256
-import base64
-import hmac
-def KDF(data, key):
-    key = key.encode('UTF-8')
-    message = data.encode('UTF-8')
-    sign = base64.b64encode(hmac.new(key, message, digestmod=sha256).digest())
-    sign = str(sign, 'UTF-8')
-    return sign
-K_seaf = KDF(K_ausf, "20011") #KDF(K_ausf, sn-name? UDM? AUSF?)
-AV = "%s%s%s%s" %(RAND, HXRES, K_seaf, AUTN)
+AV = data81.decode('UTF-8')
+data82 = t.recv(1024) #SUPI
+SUPI = data82.decode('UTF-8')
+RAND = AV[0:16]
+XRES = AV[16:24]
+K_ausf = AV[24:88]
+AUTN = AV[88:]
+import ex
+HXRES = ex.sha256(XRES)
+K_seaf = ex.KDF(sn, K_ausf)
+print("\n\n")
 print("STEP 08")
-print(" Store: [XRES]%s, [K_ausf]%s" %(XRES, K_ausf))
-print(" *[HXRES]%s" %(HXRES))
+print("------------------------------------------------------------")
+print("|                          v      v")
+print("|>UE---RAN---AMF---SEAF---AUSF---UDM")
+print("|>[AV]%s" %(AV))
+print("|>[SUPI]%s" %(SUPI))
+print("------------------------------------------------------------")
+print("|>[RAND]%s" %(RAND))
+print("|>[XRES]%s" %(XRES))
+print("|>[K_ausf]%s" %(K_ausf))
+print("|>[AUTN]%s" %(AUTN))
+print("------------------------------------------------------------")
+print("  Store:\n  [XRES]%s,\n  [K_ausf]%s" %(XRES, K_ausf))
+print("  Derive:\n  [HXRES]%s\n  [K_seaf]%s" %(HXRES, K_seaf))
+AV = "%s%s%s%s" %(RAND, HXRES, K_seaf, AUTN)
+print("  Generate new AV(RAND, HXRES, K_seaf, AUTN):\n  [AV]%s" %(AV))
 
 """
 Step 09
 ⑨ Auth. Response
 Deliver AV to AMF
 """
+print("\n\n")
 print("STEP 09")
-print(" Deliver [AV]%s to SEAF" %(AV))
+print("------------------------------------------------------------")
+print("|                   v      v")
+print("|>UE---RAN---AMF---SEAF---AUSF---UDM")
+print("|>[AV]%s" %(AV))
+print("------------------------------------------------------------")
+print("  Deliver [AV]%s to SEAF" %(AV))
 c.send(AV.encode('UTF-8'))
 
 """
 Step 16
-⑯ RES* Verify response
-RES* = XRES*
+⑯ RES Verify response
+RES = XRES
 """
 data16 = c.recv(1024) #RES
 RES = data16.decode('UTF-8')
+print("\n\n")
 print("STEP 16")
-print(" [RES]%s" %(RES))
-print(" [XRES]%s" %(XRES))
+print("------------------------------------------------------------")
+print("|             v     v      v")
+print("|>UE---RAN---AMF---SEAF---AUSF---UDM---ARPF")
+print("------------------------------------------------------------")
+print("|>Data in stored from UDM:\n|>  [XRES]%s" %(XRES))
+print("|>Data from UE:\n|>  [RES]%s" %(RES))
+print("------------------------------------------------------------")
 if RES == XRES:
-    print(" RES = XRES, allow!")
+    print("  RES = XRES, allow!")
 else:
-    print(" RES != XRES, NOT ALLOW!")
-    c.close()
+    print("  RES != XRES, NOT ALLOW!")
+    exit()
 
 """
 Step 17
@@ -109,8 +121,9 @@ Step 17
 Deliver Result, [SUPI], K_seaf to SEAF
 """
 import time
-c.send("ALLOW".encode('UTF-8')) #Result
+result = "ALLOW"
+c.send(result.encode('UTF-8')) #Result
 time.sleep(1)
 c.send(data82) #SUPI
 time.sleep(1)
-c.send(K_seaf.encode('UTF-8')) #K_seaf, why? AMF had one K_seaf already
+c.send(K_seaf.encode('UTF-8')) #K_seaf

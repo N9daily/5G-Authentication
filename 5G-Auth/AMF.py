@@ -50,14 +50,24 @@ Step 10
 Store HXRES and K_seaf
 """
 data10 = t.recv(1024) #AV
-data10 = data10.decode('UTF-8')
-RAND = data10[0:16]
-HXRES = data10[16:35] #Store
-K_seaf = data10[35:data10.find("=")+1] #Store
-AUTN = data10[data10.find("=")+1:]
+AV = data10.decode('UTF-8')
+RAND = AV[0:16]
+HXRES = AV[16:80]
+K_seaf = AV[80:144]
+AUTN = AV[144:]
+print("\n\n")
 print("STEP 10")
-print(" Store: [HXRES]%s, [K_seaf]%s" %(HXRES, K_seaf))
-print(" *[HXRES]%s" %(HXRES))
+print("------------------------------------------------------------")
+print("|                   v      v")
+print("|>UE---RAN---AMF---SEAF---AUSF")
+print("|>[AV]%s" %(AV))
+print("------------------------------------------------------------")
+print("|>[RAND]%s" %(RAND))
+print("|>[HXRES]%s" %(HXRES))
+print("|>[K_seaf]%s" %(K_seaf))
+print("|>[AUTN]%s" %(AUTN))
+print("------------------------------------------------------------")
+print("  Store:\n  [HXRES]%s,\n  [K_seaf]%s" %(HXRES, K_seaf))
 
 """
 Step 11
@@ -73,12 +83,21 @@ time.sleep(1)
 #ngSKI = 000[1]0000 -> KSI_asme -> mapped security context
 #000[0] ~ 110[0] -> possible values for the NAS key set identifier
 #111[0] -> no key is available
-#What means after [0]?
+#What's means after [0]?
 ngSKI = "00000000"
 c.send(ngSKI.encode('UTF-8'))
 """ABBA (Anti-Bidding-down Between Architectures) parameter. This parameter allows the 5G system to enforce that a UE cannot access the network using older mechanisms that have had vulnerabilities associated with them."""
+print("\n\n")
 print("STEP 11")
-print(" Deliver [RAND]%s, [AUTN]%s, [ngSKI]%s to UE" %(RAND, AUTN, ngSKI))
+print("------------------------------------------------------------")
+print("| v     v     v     v")
+print("|>UE---RAN---AMF---SEAF---AUSF")
+print("|>[RAND]%s" %(RAND))
+print("|>[HXRES]%s" %(HXRES))
+print("|>[K_seaf]%s" %(K_seaf))
+print("|>[AUTN]%s" %(AUTN))
+print("------------------------------------------------------------")
+print("  Deliver RAND, AUTN, ngSKI to UE\n  [RAND]%s\n  [AUTN]%s\n  [ngSKI]%s" %(RAND, AUTN, ngSKI))
 
 """
 Step 14
@@ -86,19 +105,24 @@ Step 14
 """
 data14 = c.recv(1024) #RES
 RES = data14.decode('UTF-8')
-import hashlib
-h = hashlib.sha1()
-h.update(RES.encode('UTF-8'))
-HRES = h.hexdigest()
+import ex
+HRES = ex.sha256(RES)
+print("\n\n")
 print("STEP 14")
-print(" [RES]%s" %(RES))
-print(" [HRES]%s" %(HRES))
-print(" [HXRES]%s" %(HXRES))
+print("------------------------------------------------------------")
+print("| v     v     v     v")
+print("|>UE---RAN---AMF---SEAF---AUSF---UDM---ARPF")
+print("|>[RES]%s" %(RES))
+print("------------------------------------------------------------")
+print("|>Caculate: RES -> HRES")
+print("|>[HRES]%s" %(HRES))
+print("------------------------------------------------------------")
+print("  Compare: HRES from UE =? HXRES from AUSF")
 if HRES == HXRES:
-    print(" HRES = HXRES, allow!")
+    print("  HRES = HXRES, allow!")
 else:
-    print(" HRES != HXRES , NOT ALLOW!")
-    c.close()
+    print("  HRES != HXRES , NOT ALLOW!")
+    exit()
 
 """
 Step 15
@@ -106,8 +130,14 @@ Step 15
 Deliver RES to AUSF
 """
 t.send(data14) #RES
+print("\n\n")
 print("STEP 15")
-print(" Deliver [RES]%s to AUSF" %(RES))
+print("------------------------------------------------------------")
+print("|             v     v      v")
+print("|>UE---RAN---AMF---SEAF---AUSF---UDM---ARPF")
+print("|>[RES]%s" %(RES))
+print("------------------------------------------------------------")
+print("  Deliver [RES]%s to AUSF" %(RES))
 
 """
 Step Final
@@ -116,24 +146,15 @@ K_seaf 推導出 K_amf
 將 ngKSI 和 K_amf 發給 AMF 使用
 """
 dataf1 = t.recv(1024)
-Result = dataf1.decode('UTF-8')
+result = dataf1.decode('UTF-8')
 dataf2 = t.recv(1024)
 SUPI = dataf2.decode('UTF-8')
-dataf3 = t.recv(1024) #AMF had K_seaf already?
-if Result == "ALLOW":
+dataf3 = t.recv(1024)
+print("\n\n")
+print("FINAL")
+print("------------------------------------------------------------")
+if result == "ALLOW" and dataf3.decode('UTF-8') == K_seaf:
     print("Link between AMF and AUSF is ALLOW")
 else:
     print("Link between AMF and AUSF isn't ALLOW")
-    t.close()
-# KDF function
-from hashlib import sha256
-import base64
-import hmac
-def KDF(data, key):
-    key = key.encode('UTF-8')
-    message = data.encode('UTF-8')
-    sign = base64.b64encode(hmac.new(key, message, digestmod=sha256).digest())
-    sign = str(sign, 'UTF-8')
-    return sign
-K_amf = KDF(K_seaf, SUPI) #K_amf = KDF(K_seaf, SUPI) ,ABBA is?
-print("K_amf and ngKSI pass to AMF from SEAF")
+    exit()
