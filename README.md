@@ -12,7 +12,7 @@
 > Reboot the virtual system.
 
 ### Setup Anaconda
-> The python version is 3.10, but Ryu has to run lower than python 3.9, so we setup Anaconda to choose the python 3.9 of enviroment.
+> The python version is 3.10, but Ryu has to run lower than python 3.9, so we setup Anaconda to choose the python 3.9 of enviroment.  
 > Download: [Anaconda, ARM64](https://repo.anaconda.com/archive/Anaconda3-2022.05-Linux-aarch64.sh)  
 > Go to the folder where you download and executes process as follow:  
 > $ source ~/anaconda3/bin/activate root  
