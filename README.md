@@ -15,7 +15,7 @@
 
 # Optional
 1. Chrome:
-> Because that can't executes chrome installing, so chooses to install chromium.  
+> Because that can't execute chrome installing, so chooses to install chromium.  
 > $ sudo apt install --assume-yes chromium-browser
 1. Visual Studio Code:
 > [VScode.deb](https://az764295.vo.msecnd.net/stable/74b1f979648cc44d385a2286793c226e611f59e7/code_1.71.2-1663189619_arm64.deb "ARM64"), then choose the ARM64.
