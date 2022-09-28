@@ -1,7 +1,7 @@
 # New version, Ubuntu2022 & apple m1 (arm64)
 > Virtual Machine: [UTM](https://mac.getutm.app)  
 > Ubuntu Version: [Ubuntu Server 22.04.1 LTS](https://cdimage.ubuntu.com/releases/22.04/release/ubuntu-22.04.1-live-server-arm64.iso?_ga=2.232931869.2065210953.1664353438-201900941.1664353438)  
-> *Ubuntu Server is installed and upgraded to desktop version later.*
+> *Ubuntu Server will be installed and upgraded to desktop version after steps.*
 
 # Setup UTM & Ubuntu Server 22.04.1 LTS
 > Create a new virtualization at UTM and installs Ubuntu 22.04.1 LTS by selecting ubuntu-22.04.1-live-server-arm64.iso.  
