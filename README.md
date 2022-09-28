@@ -8,7 +8,7 @@
 > Create a new virtualization at UTM and installs Ubuntu 22.04.1 LTS by selecting ubuntu-22.04.1-live-server-arm64.iso.  
 > When setups over, you need to quit the ISO and restart Ubuntu 22.04.1 LTS.  
 > Enter your ID and password and install Ubuntu GUI as the follow:  
-'''python
+'''bash
 $ sudo apt-get install ubuntu-desktop
 '''
 > Reboot the virtual system.
