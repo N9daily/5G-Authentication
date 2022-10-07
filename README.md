@@ -40,33 +40,33 @@ $ sudo apt install --assume-yes chromium-browser
 ![avatar](https://lh3.googleusercontent.com/drive-viewer/AJc5JmTQmF-H9mNQh0D9kDSP5W9HDL3l2IpIqtmlQF-SAXhVIKvCe_25AvDyMVvMBExxeRN5woE33DY=w3024-h1564)
 > UTM＞建立新虛擬機  
 ### 02. 
-![avatar](https://drive.google.com/file/d/10gqcr4WQwQscGYBySca_umLAHT171IhH/view?usp=sharing)
+![avatar](https://lh3.googleusercontent.com/drive-viewer/AJc5JmS9Vw5INKP5647WlpTSJJkwhy7TD19RShBGt-mJC9RfM6Agcwmb0iQcmp482VXAAzIo86jzhe0=w3024-h1730)
 > 虛擬化  
 ### 03. 
-![avatar](https://drive.google.com/file/d/11T-CbvWvtHHHrfbzYy7aBgrkSK11s7Bc/view?usp=sharing)
+![avatar](https://lh3.googleusercontent.com/drive-viewer/AJc5JmRIaqX6grI_OGXRoAcOYonV2hrujimlgW_aJ_34T0UgVETdueWixVxwE5pvrzFQ8sbUbEkC3Oc=w3024-h1730)
 > Linux  
 ### 04. 
-![avatar](https://drive.google.com/file/d/12T5m1JrqDWjIfHlCTTc5YvHgpmYSLB0P/view?usp=sharing)
+![avatar](https://lh3.googleusercontent.com/drive-viewer/AJc5JmSntFMgQUcjFvK_KLn0R-0kL0HiPrg9nVo5HdQDV4-1vxfY02ROPQKhAf9Qw_p_PIU1sdTtvH8=w3024-h1176)
 > 瀏覽  
 > ＊點選「下載Ubuntu Server for ARM」可以連結至Ubuntu官網下載ARM架構的Ubuntu，附上連結https://ubuntu.com/download/server/arm  
 ### 05. 
-![avatar](https://drive.google.com/file/d/12Z3nqpighlZ6gem6sH8AYmLM1tsUxBLh/view?usp=sharing)
+![avatar](https://lh3.googleusercontent.com/drive-viewer/AJc5JmQD2mo5sW6G5l-ji7e-COFSqex_kBHzzCMl_2hJ2b1d-kN7VV0RnDFEAoA3mRDkDill8hlSIv8=w3024-h1730)
 > 選擇從Ubuntu官網下載的Ubuntu-22.04.1-live-server-arm64.iso＞下一步  
 ### 06. 
-![avatar](https://drive.google.com/file/d/13MfGb1G2ww3vYKRp70E3kzYNIQjD4mxD/view?usp=sharing)
+![avatar](https://lh3.googleusercontent.com/drive-viewer/AJc5JmT924VW3sH-PXNCIg3nxaaOyeqz8ykMdL_XHaqlSNyfwHZbyDHN9WsiQ-x2gEctTXkfDehVRjg=w3024-h1730)
 > 我選擇 4096 MB、4 CPU核心數＞下一步＞40GB＞下一步  
 > ＊隨使用者電腦硬件自行調整  
 ### 07. 
-![avatar](https://drive.google.com/file/d/14KBhO2zSa3Px_dA_levkbTIyS1Iez40E/view?usp=sharing)
+![avatar](https://lh3.googleusercontent.com/drive-viewer/AJc5JmSo2dTfYfW0J8kaq0O4kMpdcxu-N1T16GcPsrtPfaNLY0oo5Qt0_3WzGQOoIG7dS4sXyOAPKTE=w3024-h1730)
 > 下一步  
 ### 08. 
-![avatar](https://drive.google.com/file/d/14e33dWwC3F4YfXlEiAM4z2t8bc1QTOPC/view?usp=sharing)
+![avatar](https://lh3.googleusercontent.com/drive-viewer/AJc5JmSyvUsLkOjf0Y8wFS35fqcc0W0_I_dCsk8CPsriK4dxBcR6PpC5pDL4zvclpGHxgsIIXLOVbUE=w3024-h1730)
 > 名稱隨自己喜歡做調整＞儲存  
 ### 09. 
-![avatar](https://drive.google.com/file/d/14t_jpedMhCxrkvQDoqb284p-DUJz6iN-/view?usp=sharing)
+![avatar](https://lh3.googleusercontent.com/drive-viewer/AJc5JmQO_i27H5yWTAr-zFNYlq8W3XFNYpZAGGufhTUkFRBYE67hhbFeBHL4vP3fEoCad6C16tHivmo=w3024-h1730)
 > 點選播放按鈕運行  
 ### 10. 
-![avatar](https://drive.google.com/file/d/168RlXfHX4oOGFlRZCW4JEskcAhbu9dju/view?usp=sharing)
+![avatar](https://lh3.googleusercontent.com/drive-viewer/168RlXfHX4oOGFlRZCW4JEskcAhbu9dju=w3024-h1730)
 > Try or Install Ubuntu Server  
 ### 11. 
 ![avatar](https://drive.google.com/file/d/17VPsWsOxMstyUXrMODKUOCQx4df28m3r/view?usp=sharing)
