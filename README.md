@@ -37,7 +37,7 @@ $ sudo apt install --assume-yes chromium-browser
 
 ## Detail of Building Steps
 ### 01. 
-![avatar](https://drive.google.com/drive/u/0/folders/1oUa4ZH-NNdBnOKwawoH_1AIQbWKYeYE4)
+![avatar](https://lh3.googleusercontent.com/drive-viewer/AJc5JmTQmF-H9mNQh0D9kDSP5W9HDL3l2IpIqtmlQF-SAXhVIKvCe_25AvDyMVvMBExxeRN5woE33DY=w3024-h1564)
 > UTM＞建立新虛擬機  
 ### 02. 
 ![avatar](https://drive.google.com/file/d/10gqcr4WQwQscGYBySca_umLAHT171IhH/view?usp=sharing)
