@@ -66,54 +66,54 @@ $ sudo apt install --assume-yes chromium-browser
 ![avatar](https://lh3.googleusercontent.com/drive-viewer/AJc5JmQO_i27H5yWTAr-zFNYlq8W3XFNYpZAGGufhTUkFRBYE67hhbFeBHL4vP3fEoCad6C16tHivmo=w3024-h1730)
 > 點選播放按鈕運行  
 ### 10. 
-![avatar](https://lh3.googleusercontent.com/drive-viewer/168RlXfHX4oOGFlRZCW4JEskcAhbu9dju=w3024-h1730)
+![avatar](https://lh3.googleusercontent.com/drive-viewer/AJc5JmRjUjrC9hWZg020leZugvg7H7xxKcNHPoYBPJIOxHQSmO1Cc9c8y1-ufhzKrEKMJ8d8YV4BYhY=w3024-h1730)
 > Try or Install Ubuntu Server  
 ### 11. 
-![avatar](https://drive.google.com/file/d/17VPsWsOxMstyUXrMODKUOCQx4df28m3r/view?usp=sharing)
+![avatar](https://lh3.googleusercontent.com/drive-viewer/AJc5JmQbLnIWlYqINSbCP4Dv10sC5QyZai9livDirX5sj0pbVvPMQNdcI8o9DXjE0rUPENUpF5I2RcY=w3024-h842)
 > English＞Enter/Done   
 ### 12. 
-![avatar](https://drive.google.com/file/d/181O9xWM67Gq3KmGIptuuWgEmIW7adsJQ/view?usp=sharing)
+![avatar](https://lh3.googleusercontent.com/drive-viewer/AJc5JmSw02YtUmy9ctwy5uE4BEG0I86pevxad7p3ZV215LMM9IDl6P5OtWq1yQEjniYO6dQ14g1EqiQ=w3024-h1730)
 > (X) Ubuntu Server＞Enter/Done  
 ### 13. 
-![avatar](https://drive.google.com/file/d/18w_QYaSu85aulR8fO6PNV3P1PeA6LSO7/view?usp=sharing)
+![avatar](https://lh3.googleusercontent.com/drive-viewer/AJc5JmS6TCDGZixgn36hzMEBN1wo3Fcf01cXwcm-ouv2TE5Jn_-v2O3TlKrU0MylWHI0_TIvbXFZo9Y=w3024-h842)
 > Continue  
 ### 14. 
-![avatar](https://drive.google.com/file/d/1ABguWdG0zn3baKergit0uNQ8R9qBf1DZ/view?usp=sharing)
+![avatar](https://lh3.googleusercontent.com/drive-viewer/AJc5JmTtceeE3NBnUMsPABNLAnQdOvCJANeIy4N0Krb0PG71jgRmnjKbPZZyC192xpqml_xlWzHQNYE=w3024-h1730)
 > 自行設定內容＞Enter/Done  
 ### 15. 
-![avatar](https://drive.google.com/file/d/1B5CFSc6Uu0O2KaOB4xJF-WOeeIH5VY8S/view?usp=sharing)
+![avatar](https://lh3.googleusercontent.com/drive-viewer/AJc5JmT0B7cCKnJ-rWFvDIVDKUwUeTwak55Sbgl4u2QBHj4Ou3TCawk3v3KGud2aEWvmUQF-n6y9NHY=w3024-h1730)
 > 等待執行完畢
 ### 16. 
-![avatar](https://drive.google.com/file/d/1Bqtj3FODSiifvlEWu3F1d_B8itopnsTR/view?usp=sharing)
+![avatar](https://lh3.googleusercontent.com/drive-viewer/AJc5JmQowdjXcUb9yUZdJFSMydG9Tc8xVK8dfL6Y9rnfe6niIDUsbJjPiNVe80zJKWjcx2mYjy0M0qE=w3024-h842)
 > Reboot Now  
 ### 17. 
-![avatar](https://drive.google.com/file/d/1DFCrZb_rY1RHR4pEpxsqn-041Ajuz-vP/view?usp=sharing)
+![avatar](https://lh3.googleusercontent.com/drive-viewer/AJc5JmRDqaSzcP869w-_PyYrkbTHFJ8FH54CACPHSylhSXWrgRXGoaDP8X6-Q1efRueE7w2gQZIs33U=w3024-h1730)
 > 之後視窗會變為黑畫面＞選擇此視窗右上方數來第二個icon「Drive image options」＞選擇CD/DVD (ISO)＞退出  
 ### 18. 
-![avatar](https://drive.google.com/file/d/1D_xsi6m9ELjQ32C0oi0ZC9MkEUr76Mlg/view?usp=sharing)
+![avatar](https://lh3.googleusercontent.com/drive-viewer/AJc5JmR4KMpuUDARZ1uueUIEx-Tb-seX9U_oLyORCYZImSz8BtvTypl2rgmECnwS6mtqQ9rAOayJcz8=w3024-h842)
 > 選擇左上方第三個icon「Restarts the VM」  
 ### 19. 
-![avatar](https://drive.google.com/file/d/1EmeG75lAgR9QKNvIsUVUdWbCfi4gCwJb/view?usp=sharing)
+![avatar](https://lh3.googleusercontent.com/drive-viewer/AJc5JmSS6yCyXISyokG4B5lNTJIr2gdGyqU1lvs3xQOnTEzVudiwGG5tZYk4vgGVD_vWfeyQr3eKzDk=w3024-h842)
 > 輸入使用者名稱與密碼  
 ### 20. 
-![avatar](https://drive.google.com/file/d/1Eyd0BrsHwxIS6QqMVb4Pu65leadpiUtp/view?usp=sharing)
+![avatar](https://lh3.googleusercontent.com/drive-viewer/AJc5JmTSIdh5v0xniVs4xA6kFg0zllaxDF-HAtAuspBxtusYcR26oUXtIFKBbyt9DTxAhcZJq1YVvXE=w3024-h1730)
 ```bash
 $ sudo apt-get install ubuntu-desktop
 ```
 > ＊安裝UI介面  
 ### 21. 
-![avatar](https://drive.google.com/file/d/1H4qNaiMXHIW9hfi3niujTYUV7RbBeWUY/view?usp=sharing)
+![avatar](https://lh3.googleusercontent.com/drive-viewer/AJc5JmSmab5g7s5aYk5fTOhvzpoeffO5QBGj8E4l3X1NHyTWKTO0S8QdqTeWGl8pjozmaK93HMonjPo=w3024-h1730)
 > Enter/OK  
 ### 22. 
-![avatar](https://drive.google.com/file/d/1IC00Dg1W5uw8EppxggSn6jFwAuvA2EZK/view?usp=sharing)
+![avatar](https://lh3.googleusercontent.com/drive-viewer/AJc5JmQZOcmfYIPnsEXC6ZvfSKQAJpOYhnWLw0ki4Uj2990kRKTUQA4cJKR-isiujuSiHuOTKlbhvyQ=w3024-h1730)
 ```bash
 $ sudo reboot
 ```
 ### 23. 
-![avatar](https://drive.google.com/file/d/1KM_iXS4lWIjMALZOtu03VWSFYQ5eOR2G/view?usp=sharing)
+![avatar](https://lh3.googleusercontent.com/drive-viewer/AJc5JmTWCBykEf-ULBvn7ieFWqarMy6o08_FLAd2S5oNbfc0V8qEAGxEPjNTCrIEtCkeH9bxwDhEvrw=w3024-h1730)
 > 輸入密碼  
 ### 24. 
-![avatar](https://drive.google.com/file/d/1Ne4ScxYeShHwoAjZU9Fplxh3Aqx9xwgs/view?usp=sharing)
+![avatar](https://lh3.googleusercontent.com/drive-viewer/AJc5JmShs5RwqGDfPbWsmmbsr9RcKLP9h-NCxvDLgK8OJHgs2hCedWhZCzbaO-Uk_C31Apr7p937W4g=w3024-h1730)
 ```bash
 $ sudo apt-get update
 ```
@@ -122,36 +122,36 @@ $ sudo apt-get upgrade
 ```
 > ＊更新並升級系統  
 ### 25. 
-![avatar](https://drive.google.com/file/d/1PbfFKJX1_Swbz_BVT6WVwgSLaR4QxCAu/view?usp=sharing)
+![avatar](https://lh3.googleusercontent.com/drive-viewer/AJc5JmSg6SVDLAcHA0n3V55k5vJJk8W-TQBf71H8Gp5XrgDSnLdYyl4-55x2HwikqXLuL3kGda7VCac=w3024-h842)
 ```bash
 $ sudo apt-get install --assume-yes chromium-browser
 ```
 > ＊安裝Chromium瀏覽器  
 ### 26. 
-![avatar](https://drive.google.com/file/d/1QpNAkf_h1m5mJEMi_Yw8Hc9n4t8rv30u/view?usp=sharing)
+![avatar](https://lh3.googleusercontent.com/drive-viewer/AJc5JmQ9xDPgAorINapLmCiHstinvZkG6lTt_P_4sBtqQktdETTKFsf3CzwTeOAWbS321iGQ5LLHWxw=w3024-h1730)
 > 好了會重新登入Ubuntu＞Enter/OK  
 ### 27. 
-![avatar](https://drive.google.com/file/d/1RQGFove5AmUJlJzpFsYeuyC_0_-1umkm/view?usp=sharing)
+![avatar](https://lh3.googleusercontent.com/drive-viewer/AJc5JmSPZDy_EqPZXekXdPU-yoWfG8DWBWVIFtED2Ilus-Qc5NmDgyyU_dfq1iukb8hVpj9qBqvUtaM=w3024-h1730)
 ```bash
 $ sudo passwd root
 ```
 > ＞輸入想要的root密碼＞再次輸入想要的root密碼  
 > ＊建制root密碼  
 ### 28. 
-![avatar](https://drive.google.com/file/d/1XYBdLxxl4BELT-9gS1cBxAcwpaqgXk7c/view?usp=sharing)
+![avatar](https://lh3.googleusercontent.com/drive-viewer/AJc5JmQH8efATmCJhwTxtMSNmjJoIbJngjQSBMwq0DPSt3XCDE743z8D3kWm1yNMwhe-mI6MkL7dpEw=w3024-h842)
 > 至Anaconda官網下載Linux ARM 64的版本（鼠標位置）＞右鍵＞save link as ...＞內建位置（Downloads）  
 > ＊由於內建安裝的python為3.10.6版本，導致接下來運行的作業環境安裝不了，我使用Anaconda來建制python3.9的環境  
 ### 29. 
-![avatar](https://drive.google.com/file/d/1XpUzVIRd4dxwJkP3hwVuFlL__CWU6t2t/view?usp=sharing)
+![avatar](https://lh3.googleusercontent.com/drive-viewer/AJc5JmT5TYEFFiUA8TftY_-WHvn8MWjl3kFKE1hvmNmvqzL6W-8BqSKFd8poljCOBxQymOI9-qb84vA=w3024-h842)
 > 在Downloads開啟Terminal  
 ### 30.
-![avatar](https://drive.google.com/file/d/1Y8vrA2ifpCS4vmkFi6wwdRu8TokL8Gi4/view?usp=sharing)
+![avatar](https://lh3.googleusercontent.com/drive-viewer/AJc5JmSYKyx1jqsVgB3ZV0SF0wq2pIk4PzQIDvKbiERAb1cLup1hfqaTPiheYhXbfxIciTMIy-zGSX8=w3024-h1730)
 ```bash
 $ bash Anaconda3-2022.05-Linux-aarch64.sh
 ```
 > ＞Enter＞yes  
 ### 31.
-![avatar](https://drive.google.com/file/d/1ZzFMkShdW7CsgQMLbxWRitXMTUlhqh6B/view?usp=sharing)
+![avatar](https://lh3.googleusercontent.com/drive-viewer/AJc5JmS6gv7A21-711O_hlq1KdXAVA8PI3924uA702QFA1lOoo73vn6gV4cCvdwFf7d27Cq7uDHDcrQ=w3024-h1730)
 ```bash
 $ sudo apt update
 ```
@@ -159,7 +159,7 @@ $ sudo apt update
 $ sudo apt upgrade
 ```
 ### 32.
-![avatar](https://drive.google.com/file/d/1_VPYPy5qAEZOERGsqsMvlyZTZl_7AAeE/view?usp=sharing)
+![avatar](https://lh3.googleusercontent.com/drive-viewer/AJc5JmTQPsgo9fvr-wKQAXiHmU9pnY_gLVHKH5uP6Nb2JsaUbiTpPI0OKy_nF1R_YRzpyDqj1YSASig=w3024-h1730)
 ```bash
 $ source ~/anaconda3/bin/activate root
 ```
@@ -169,16 +169,16 @@ $ anaconda-navigator
 ```
 > ＊執行Anaconda，若需要更新則更新它，Lunch Navigator  
 ### 33.
-![avatar](https://drive.google.com/file/d/1c_ew5SY9Uxa3KGJtoXSACwfzSXnqqBo0/view?usp=sharing)
+![avatar](https://lh3.googleusercontent.com/drive-viewer/AJc5JmTXVn12BQIEBsMMtFOlhYJzSJsP9dwFdnn9RG9gWVh1jFdz7I9eAdtaf8Gz3fOsEtesGzg6YCY=w3024-h1730)
 > 選擇鼠標位置Environments  
 ### 34.
-![avatar](https://drive.google.com/file/d/1d0tvewvVzxFgWfqWipS7akACBBUdlW7K/view?usp=sharing)
+![avatar](https://lh3.googleusercontent.com/drive-viewer/AJc5JmTy6bASkh0UAJRufMRg6OTgINAAqIo4H9dBxvMq9mEEmPVHhIIUhu4hV7kinSJa-0Bzv2_X4lo=w3024-h842)
 > Open Terminal  
 ### 35.
-![avatar](https://drive.google.com/file/d/1dL779WKudSOkcnoAGT-7nuC9x9GMmu6e/view?usp=sharing)
+![avatar](https://lh3.googleusercontent.com/drive-viewer/AJc5JmQUMZlS4rlVAcp1Ac4Gu0IhZE1ivO7UzHKl-XCuY-pUX_mkkNTWLRFure637Vl9kI-cOMoNHcc=w3024-h842)
 > 確認一下python的版本，為我們所需要的3.9  
 ### 36.
-![avatar](https://drive.google.com/file/d/1euWKbecX09qRtVGbflWvHo92840ZlfDl/view?usp=sharing)
+![avatar](https://lh3.googleusercontent.com/drive-viewer/AJc5JmQYDdSgTlaxEgYOY1kaSU2xC1ReXCbaK1WtjR1w2iuipxH0490vc0MVV8ZTnqdb7H2goxu6yA0=w3024-h1730)
 ```bash
 $ sudo apt-get update
 ```
@@ -202,7 +202,7 @@ $ sudo mn
 ```
 > ＊安裝Mininet，目的為建立拓樸，確認是否能使用，如圖所示  
 ### 37.
-![avatar](https://drive.google.com/file/d/1fw_HbHAaL5ohXT1xIGMNY_GjLAt2dblk/view?usp=sharing)
+![avatar](https://lh3.googleusercontent.com/drive-viewer/AJc5JmQTeXmGJ-9sN3afmMxaWmhbVKnC2zDWxWtaN2PvLhYKEvtGgWTqKoqb3DbhY4wRY2hMwFiqD_E=w3024-h842)
 ```bash
 $ exit
 ```
@@ -220,7 +220,7 @@ $ pip3 install six --upgrade
 $ pip3 install oslo.config q --upgrade
 ```
 ### 38.
-![avatar](https://drive.google.com/file/d/1q4MV98h6IdqLPWwUcTabRcZ4waVcXBjM/view?usp=sharing)
+![avatar](https://lh3.googleusercontent.com/drive-viewer/AJc5JmQRhF1RPIWPAAGW9IL59rTKM2JC0jzdfMcehG4RtDFI7vpkEsWeM4DsxbWyZFRVqJrbK4F37Lg=w3024-h842)
 ```bash
 $ cd ~
 ```
@@ -238,7 +238,7 @@ $ ryu-manager --verbose ryu.app.ofctl_rest
 ```
 > ＊安裝Ryu，並且試運行  
 ### 39.
-![avatar](https://drive.google.com/file/d/1qSpJhBir8jg6BOrn0B55y9GhGjULNNWj/view?usp=sharing)
+![avatar](https://lh3.googleusercontent.com/drive-viewer/AJc5JmTZgInV9mZVIXH6t_G9-SAZc-QpBh8ROAR2t9Ub7aTZdqBSC4YyXnSxJ1nItOxo2k8jF2Xkh0g=w3024-h1730)
 ```bash
 $ cd ~/mininet/custom
 ```
@@ -247,7 +247,7 @@ $ git clone https://github.com/N9daily/5G-Authentication.git
 ```
 > ＊下載我所製作的5G-AKA package，包含5G-AKA所用到的function：UE、RAN、AMF、SEAF、AUSF、UDM，及5G拓樸與加解密ex.py（可以在其中試需求修改加解密辦法）  
 ### 40.
-![avatar](https://drive.google.com/file/d/1qiGpzJsZFQtGNAiZyHCwd2Zh3s_PgqN5/view?usp=sharing)
+![avatar](https://lh3.googleusercontent.com/drive-viewer/AJc5JmRwXqb1CD5B0aooyePm4LQxTfXI1kDdqNIrqtYrXax98N3NwCtJi_uY9fBUxgH2aC3gDNWEWTg=w3024-h842)
 > 使用Anaconda開啟兩個Terminal  
 ```bash
 $ ryu-manager ryu.app.simple_switch_13
@@ -261,25 +261,25 @@ $ sudo mn --custom 5gtopo.py --topo mytopo --controller=remote,ip=127.0.0.1,port
 ```
 > ＊第二個使用Mininet拓樸  
 ### 41.
-![avatar](https://drive.google.com/file/d/1sMfpoKb5lI2bSsXxsnO-q1ssrF43Ob_C/view?usp=sharing)
+![avatar](https://lh3.googleusercontent.com/drive-viewer/AJc5JmSgYbSoBM_JbXdy7bcYkDwohQIFIjIqtbDj59MZfusBraDp9QMHRYxBs0KSsRuVoZgUj69fE7w=w3024-h842)
 ```bash
 $ pingall
 ```
 > ＊確認拓樸的節點皆有連線成功  
 ### 42.
-![avatar](https://drive.google.com/file/d/1u7OeyDkwGlcoVGKXROswdvc3vyIV4M59/view?usp=sharing)
+![avatar](https://lh3.googleusercontent.com/drive-viewer/AJc5JmRziisNew1xsD2H1McwG5dslOa_VKFHrUTK7t2Omgm5A9Dz-f8cPiXmFrWL56ieKr63ZnRAK0g=w3024-h1730)
 ```bash
 $ xterm UE RAN AMF AUSF UDM
 ```
 > ＊開啟各個節點的終端機  
 ### 43.
-![avatar](https://drive.google.com/file/d/1y8AFKqyElfaX82PDnubOJu2Vl1bMP6xl/view?usp=sharing)
+![avatar](https://lh3.googleusercontent.com/drive-viewer/AJc5JmS9SgpGj8KALBMgTH-qB5bv0Zal3hXZ8tSQsd_iTAlw9YhJSzTFmzybq5K0PrV7IBNCIt6Eydg=w3024-h1730)
 > 在各個終端機上輸入對應的名稱  
 ```bash
 $ sudo python3 UDM.py
 ```
 > ＊在UDM終端機中輸入UDM.py、在AUSF終端機中輸入AUSF.py，依此類推  
 ### 44.
-![avatar](https://drive.google.com/file/d/1yl1SIaxKZCzNZTi6UE_y46iO53sApE5A/view?usp=sharing)
-![avatar](https://drive.google.com/file/d/1zdbBYJJ02bYAPTe40eMwUKCycQgwaBUK/view?usp=sharing)
+![avatar](https://lh3.googleusercontent.com/drive-viewer/AJc5JmQlMIXu3VnKXA923JjUzFR8xP2e9DYESemZEDHQTCEbJIcVwMBlMB_hd9ZOuxT8VeWF6Kef81Q=w3024-h1730)
+![avatar](https://lh3.googleusercontent.com/drive-viewer/AJc5JmTQrtwzEKNZbe8CjMY8tiNabQHkkRHKNYpKYVCXNYh_5Ft7hlreRTnPyN30jN6jTjhz_eEJ3KA=w3024-h842)
 > 依順序UDM＞AUSF＞AMF＞RAN＞UE的順序按下Enter鍵執行，即可觀察5G-AKA傳遞的步驟  
