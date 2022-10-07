@@ -1,3 +1,6 @@
+import colorama
+from colorama import Style, Fore, Back
+colorama.init(autoreset=True)
 """
 Step 02
 ②
@@ -5,44 +8,41 @@ RAN get [SUPI]46697123456789, and send back [MSG]200ACK!
 """
 import socket
 f = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-f.bind(("10.1.0.2",1))
+f.bind(("10.1.0.3",1))
 f.listen(5)
 c,addr = f.accept()
 data = c.recv(1024)
-SUPI = data.decode('UTF-8')
-sn = "10011" #get from RAN
-c.send("200ACK!".encode('UTF-8'))
-print("STEP 02")
-print("------------------------------------------------------------")
-print("|             v     v")
-print("|>UE---RAN---AMF---SEAF")
-print("|>[SUPI]%s" %(SUPI))
-print("|>[sn-name]10011") #get from RAN
-print("------------------------------------------------------------")
-print("  RAN get [SUPI]%s" %(SUPI))
-print("  Take [SUPI]%s to SEAF near by AMF" %(data.decode('UTF-8')))
-print("  Send back 200ACK! to UE")
+data = data.decode('UTF-8')
+SUPI = data[0:14]
+sn = data[14:]
+print(Back.RED+"STEP 02")
+print(Fore.RED+"------------------------------------------------------------")
+print(Fore.RED+"|      v      v")
+print(Fore.RED+"|>UE---RAN---AMF---SEAF")
+print(Fore.RED+"------------------------------------------------------------")
+print(Fore.RED+"  Get\n  "+Fore.GREEN+"[SUPI]%s\n  [sn-name]%s" %(SUPI, sn))
 
 """
 Step 03
 ③ Auth. Request
 SUCI or SUPI, SN-name
-[SN-name]00001
 """
 #link to AUSF's host
 t = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-t.connect(("10.1.0.3", 1))
+t.connect(("10.1.0.4", 1))
 data3 = "%s%s" %(SUPI, sn)
 t.send(data3.encode('UTF-8'))
 print("\n\n")
-print("STEP 03")
-print("------------------------------------------------------------")
-print("|                   v      v")
-print("|>UE---RAN---AMF---SEAF---AUSF")
-print("|>[SUPI]%s" %(SUPI))
-print("|>[sn-name]%s" %(sn))
-print("------------------------------------------------------------")
-print("  Delivor [SUPI]%s, [sn-name]%s to AUSF" %(SUPI, sn))
+print(Back.CYAN+"STEP 03")
+print(Fore.CYAN+"------------------------------------------------------------")
+print(Fore.CYAN+"|                   v      v")
+print(Fore.CYAN+"|>UE---RAN---AMF---SEAF---AUSF")
+print(Fore.CYAN+"|>"+Fore.GREEN+"[SUPI]%s" %(SUPI))
+print(Fore.CYAN+"|>"+Fore.GREEN+"[sn-name]%s" %(sn))
+print(Fore.CYAN+"------------------------------------------------------------")
+print(Fore.CYAN+"  Delivor\n")
+print(Fore.GREEN+"  [SUPI]%s\n  [sn-name]%s\n" %(SUPI, sn))
+print(Fore.CYAN+"  to AUSF")
 
 """
 Step 10
@@ -56,18 +56,20 @@ HXRES = AV[16:80]
 K_seaf = AV[80:144]
 AUTN = AV[144:]
 print("\n\n")
-print("STEP 10")
-print("------------------------------------------------------------")
-print("|                   v      v")
-print("|>UE---RAN---AMF---SEAF---AUSF")
-print("|>[AV]%s" %(AV))
-print("------------------------------------------------------------")
-print("|>[RAND]%s" %(RAND))
-print("|>[HXRES]%s" %(HXRES))
-print("|>[K_seaf]%s" %(K_seaf))
-print("|>[AUTN]%s" %(AUTN))
-print("------------------------------------------------------------")
-print("  Store:\n  [HXRES]%s,\n  [K_seaf]%s" %(HXRES, K_seaf))
+print(Back.RED+"STEP 10")
+print(Fore.RED+"------------------------------------------------------------")
+print(Fore.RED+"|                   v      v")
+print(Fore.RED+"|>UE---RAN---AMF---SEAF---AUSF")
+print(Fore.RED+"------------------------------------------------------------")
+print(Fore.RED+"  Get")
+print(Fore.GREEN+"  [AV]%s" %(AV))
+print(Fore.RED+"------------------------------------------------------------")
+print(Fore.RED+"|>"+Fore.GREEN+"[RAND]%s" %(RAND))
+print(Fore.RED+"|>"+Fore.GREEN+"[HXRES]%s" %(HXRES))
+print(Fore.RED+"|>"+Fore.GREEN+"[K_seaf]%s" %(K_seaf))
+print(Fore.RED+"|>"+Fore.GREEN+"[AUTN]%s" %(AUTN))
+print(Fore.RED+"------------------------------------------------------------")
+print(Fore.RED+"  Store:\n"+Fore.GREEN+"  [HXRES]%s\n  [K_seaf]%s" %(HXRES, K_seaf))
 
 """
 Step 11
@@ -88,16 +90,16 @@ ngSKI = "00000000"
 c.send(ngSKI.encode('UTF-8'))
 """ABBA (Anti-Bidding-down Between Architectures) parameter. This parameter allows the 5G system to enforce that a UE cannot access the network using older mechanisms that have had vulnerabilities associated with them."""
 print("\n\n")
-print("STEP 11")
-print("------------------------------------------------------------")
-print("| v     v     v     v")
-print("|>UE---RAN---AMF---SEAF---AUSF")
-print("|>[RAND]%s" %(RAND))
-print("|>[HXRES]%s" %(HXRES))
-print("|>[K_seaf]%s" %(K_seaf))
-print("|>[AUTN]%s" %(AUTN))
-print("------------------------------------------------------------")
-print("  Deliver RAND, AUTN, ngSKI to UE\n  [RAND]%s\n  [AUTN]%s\n  [ngSKI]%s" %(RAND, AUTN, ngSKI))
+print(Back.CYAN+"STEP 11")
+print(Fore.CYAN+"------------------------------------------------------------")
+print(Fore.CYAN+"|       v     v     v")
+print(Fore.CYAN+"|>UE---RAN---AMF---SEAF---AUSF")
+print(Fore.CYAN+"|>"+Fore.GREEN+"[RAND]%s" %(RAND))
+print(Fore.CYAN+"|>"+Fore.GREEN+"[HXRES]%s" %(HXRES))
+print(Fore.CYAN+"|>"+Fore.GREEN+"[K_seaf]%s" %(K_seaf))
+print(Fore.CYAN+"|>"+Fore.GREEN+"[AUTN]%s" %(AUTN))
+print(Fore.CYAN+"------------------------------------------------------------")
+print(Fore.CYAN+"  Deliver RAND, AUTN, ngSKI to RAN\n"+Fore.GREEN+"  [RAND]%s\n  [AUTN]%s\n  [ngSKI]%s" %(RAND, AUTN, ngSKI))
 
 """
 Step 14
@@ -108,20 +110,21 @@ RES = data14.decode('UTF-8')
 import ex
 HRES = ex.sha256(RES)
 print("\n\n")
-print("STEP 14")
-print("------------------------------------------------------------")
-print("| v     v     v     v")
-print("|>UE---RAN---AMF---SEAF---AUSF---UDM---ARPF")
-print("|>[RES]%s" %(RES))
-print("------------------------------------------------------------")
-print("|>Caculate: RES -> HRES")
-print("|>[HRES]%s" %(HRES))
-print("------------------------------------------------------------")
-print("  Compare: HRES from UE =? HXRES from AUSF")
+print(Back.RED+"STEP 14")
+print(Fore.RED+"------------------------------------------------------------")
+print(Fore.RED+"| v     v     v     v")
+print(Fore.RED+"|>UE---RAN---AMF---SEAF---AUSF---UDM---ARPF")
+print(Fore.RED+"------------------------------------------------------------")
+print(Fore.RED+"  Get\n"+Fore.GREEN+"  [RES]%s" %(RES))
+print(Fore.RED+"------------------------------------------------------------")
+print(Fore.RED+"|>Caculate: RES -> HRES")
+print(Fore.RED+"|>"+Fore.GREEN+"[HRES]%s" %(HRES))
+print(Fore.RED+"------------------------------------------------------------")
+print(Fore.RED+"  Compare: HRES from UE =? HXRES from AUSF")
 if HRES == HXRES:
-    print("  HRES = HXRES, allow!")
+    print(Fore.RED+"  HRES = HXRES, allow!")
 else:
-    print("  HRES != HXRES , NOT ALLOW!")
+    print(Fore.RED+"  HRES != HXRES , NOT ALLOW!")
     exit()
 
 """
@@ -131,13 +134,13 @@ Deliver RES to AUSF
 """
 t.send(data14) #RES
 print("\n\n")
-print("STEP 15")
-print("------------------------------------------------------------")
-print("|             v     v      v")
-print("|>UE---RAN---AMF---SEAF---AUSF---UDM---ARPF")
-print("|>[RES]%s" %(RES))
-print("------------------------------------------------------------")
-print("  Deliver [RES]%s to AUSF" %(RES))
+print(Back.CYAN+"STEP 15")
+print(Fore.CYAN+"------------------------------------------------------------")
+print(Fore.CYAN+"|             v     v      v")
+print(Fore.CYAN+"|>UE---RAN---AMF---SEAF---AUSF---UDM---ARPF")
+print(Fore.CYAN+"|>"+Fore.GREEN+"[RES]%s" %(RES))
+print(Fore.CYAN+"------------------------------------------------------------")
+print(Fore.CYAN+"  Deliver\n"+Fore.GREEN+"  [RES]%s\n" %(RES)+Fore.CYAN+"  to AUSF")
 
 """
 Step Final
@@ -151,10 +154,10 @@ dataf2 = t.recv(1024)
 SUPI = dataf2.decode('UTF-8')
 dataf3 = t.recv(1024)
 print("\n\n")
-print("FINAL")
-print("------------------------------------------------------------")
+print(Back.RED+"FINAL")
+print(Fore.RED+"------------------------------------------------------------")
 if result == "ALLOW" and dataf3.decode('UTF-8') == K_seaf:
-    print("Link between AMF and AUSF is ALLOW")
+    print(Fore.GREEN+"Link between AMF and AUSF is ALLOW")
 else:
-    print("Link between AMF and AUSF isn't ALLOW")
+    print(Fore.GREEN+"Link between AMF and AUSF isn't ALLOW")
     exit()
