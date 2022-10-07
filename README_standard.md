@@ -1,17 +1,17 @@
 # 5G-AKA
 > 在 Virtual Box 上建立 Linux 虛擬環境，ubuntu-18.04.5-desktop-amd64.iso / ubuntu-20.04.2.0-desktop-amd64.iso，使用 Mininet 拓樸，使用 Ryu 控制傳輸，模擬 5G 認證過程。  
 ***
-## 環境：
-### Mac(IOS):  Big Sur 11.1
+## 環境
+> Mac(IOS):  Big Sur 11.1  
 | Virtual Application | RAM | hard drive size |
 | ---- | ---- | ---- |
 | Virtual Box 6.1.16 r140961 | 8192 MB | 20.0 GB |
-### Win:  Win10
+> Win:  Win10  
 | Virtual Application | RAM | hard drive size |
 | ---- | ---- | ---- |
 | Virtual Box 6.1.16 r140961 | 8192 MB | 20.0 GB |
 ***
-### Ubuntu COPY & PASTE in virtualbox
+## Ubuntu COPY & PASTE in Virtualbox
 1. 安裝元件
 ```bash
 $ sudo apt install dkms build-essential linux-headers-generic
